@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Hamburger Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            padding: 14px;
+            text-decoration: none;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 26px;
+            color: white;
+            float: right;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 600px) {
+            .navbar a {
+                display: none;
+                width: 100%;
+                text-align: center;
+                background: #444;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            #menu-toggle:checked + .navbar .menu-items a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="navbar">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <div class="menu-items">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+</body>
+</html>
